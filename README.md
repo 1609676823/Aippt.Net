@@ -388,9 +388,18 @@ Console.WriteLine(designClearResponse.msg);
 ## 11.1 ‘§÷√¥ ¡–±Ì
 ```
 AipptClient aipptClient=new AipptClient("apikey", "secretkey","userid");
+ConfigListResponse configListResponse = aipptClient.ConfigList();
+Console.WriteLine(configListResponse.RealJsonstring);
+Console.WriteLine(configListResponse.data!.list!.FirstOrDefault()!.id);
+Console.WriteLine(configListResponse.data!.list!.FirstOrDefault()!.title);
 ```
 ## 11.2 ‘§÷√¥ œÍ«È
 ```
 AipptClient aipptClient=new AipptClient("apikey", "secretkey","userid");
+ConfigDetailResponse configDetailResponse = aipptClient.ConfigDetail("1");
+Console.WriteLine(configDetailResponse.RealJsonstring);
+Console.WriteLine(configDetailResponse.data!.id);
+Console.WriteLine(configDetailResponse.data!.title);
+Console.WriteLine(configDetailResponse.data!.content);
 ```
     

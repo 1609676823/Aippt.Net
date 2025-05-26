@@ -22,12 +22,11 @@ namespace ConsoleAppTest
                 Console.WriteLine(item.Key + ":" + item.Value);
             }
 
-            ConfigDetailResponse configDetailResponse = aipptClient.ConfigDetail("1");
-            Console.WriteLine(configDetailResponse.RealJsonstring);
-            Console.WriteLine(configDetailResponse.data!.id);
-            Console.WriteLine(configDetailResponse.data!.title);
-            Console.WriteLine(configDetailResponse.data!.content);
-
+            ConfigListResponse configListResponse = aipptClient.ConfigList();
+            Console.WriteLine(configListResponse.RealJsonstring);
+            Console.WriteLine(configListResponse.data!.list!.FirstOrDefault()!.id);
+            Console.WriteLine(configListResponse.data!.list!.FirstOrDefault()!.title);
+           
             //ExportFileResponse exportFileResponse= aipptClient.ExportFile(id: "42685536",files_to_zip:"true");
             //string task_key = exportFileResponse.data!;
             //DesignDeleteResponse designDeleteResponse = aipptClient.DesignDelete(user_design_id: "42685536");
