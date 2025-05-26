@@ -1,4 +1,7 @@
 # Aippt.Net
+nuget地址:https://www.nuget.org/packages/Aippt.Net
+
+
 AIPPT接口官方文档:https://open.aippt.cn/docs/zh/guide/introduce.html
 # 1.获取高级配置
 ```
