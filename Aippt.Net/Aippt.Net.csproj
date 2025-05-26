@@ -21,7 +21,6 @@
     <Version>1.0.0.1</Version>
   </PropertyGroup>
 
-
   <ItemGroup>
     <PackageReference Include="System.Net.Http" Version="4.3.4" Condition="'$(TargetFramework)' == 'net481'" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" Condition="'$(TargetFramework)' == 'net48'" />
@@ -34,13 +33,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="README.md" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+
+
 
 </Project>
